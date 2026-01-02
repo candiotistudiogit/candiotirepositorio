@@ -6,18 +6,14 @@
     <title>Candioti Studio | Architectural Visualization</title>
     <meta name="description" content="High-end photorealistic 3D renders for architecture, interiors and real estate projects worldwide.">
     
-    <!-- Fonts: Outfit (Headings) and Inter (Body) for that clean, modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Custom Configuration for Ethereal Aesthetic -->
     <script>
         tailwind.config = {
             theme: {
@@ -74,10 +70,11 @@
             transform: scale(1.05);
         }
 
-        /* Navbar Styles - Modified for Black Bar */
+        /* Navbar Styles - Modified for White Background */
         .glass-nav {
-            background-color: #1a1a1a; /* Brand Black Background */
-            border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separator */
+            background-color: rgba(255, 255, 255, 0.95); /* White background */
+            border-bottom: 1px solid rgba(0,0,0,0.05); /* Subtle separator */
+            backdrop-filter: blur(10px); /* Glass effect */
         }
 
         /* Modal Styles */
@@ -88,53 +85,42 @@
 </head>
 <body class="antialiased selection:bg-gray-200 selection:text-black">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <!-- Increased height from h-20 to h-28 to accommodate larger logo -->
             <div class="flex justify-between items-center h-28">
-                <!-- Logo -->
-                <a href="#" class="block">
-                    <!-- Removed filters so the original image displays exactly as uploaded -->
-                    <img src="images/logo cuadrado.png" alt="Candioti Studio" class="h-24 w-auto object-contain">
+                
+                <a href="#" class="block hover:opacity-70 transition-opacity">
+                    <span class="font-display font-medium text-2xl tracking-widest text-brand-black uppercase">
+                        Candioti<span class="font-light text-gray-400">Studio</span>
+                    </span>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-10 items-center">
-                    <!-- Text color changed to white for black background -->
-                    <a href="#about" class="text-sm uppercase tracking-widest text-white hover:text-gray-300 transition-colors">About</a>
-                    <a href="#portfolio" class="text-sm uppercase tracking-widest text-white hover:text-gray-300 transition-colors">Selected Works</a>
-                    <a href="#services" class="text-sm uppercase tracking-widest text-white hover:text-gray-300 transition-colors">Services</a>
-                    <!-- Contact Link Added Back -->
-                    <a href="#contact" class="px-6 py-2 border border-white text-white text-xs uppercase tracking-widest hover:bg-white hover:text-brand-black transition-all duration-300">Contact</a>
+                    <a href="#about" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">About</a>
+                    <a href="#portfolio" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">Selected Works</a>
+                    <a href="#services" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">Services</a>
+                    <a href="#contact" class="px-6 py-2 border border-brand-black text-brand-black text-xs uppercase tracking-widest hover:bg-brand-black hover:text-white transition-all duration-300">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="outline-none mobile-menu-button">
-                        <!-- Icon color changed to white -->
-                        <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+                        <i data-lucide="menu" class="w-6 h-6 text-brand-black"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <!-- Background changed to black, text to white -->
-        <div class="hidden mobile-menu md:hidden bg-brand-black border-t border-gray-800 absolute w-full left-0 shadow-lg text-white">
+        <div class="hidden mobile-menu md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg text-brand-black">
             <ul class="flex flex-col text-center py-8 space-y-6">
-                <li><a href="#about" class="block text-sm uppercase tracking-widest hover:text-gray-300">About</a></li>
-                <li><a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-gray-300">Work</a></li>
-                <li><a href="#services" class="block text-sm uppercase tracking-widest hover:text-gray-300">Services</a></li>
-                <!-- Mobile Contact Link Added Back -->
-                <li><a href="#contact" class="block text-sm uppercase tracking-widest font-medium hover:text-gray-300">Contact</a></li>
+                <li><a href="#about" class="block text-sm uppercase tracking-widest hover:text-gray-500">About</a></li>
+                <li><a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-gray-500">Work</a></li>
+                <li><a href="#services" class="block text-sm uppercase tracking-widest hover:text-gray-500">Services</a></li>
+                <li><a href="#contact" class="block text-sm uppercase tracking-widest font-medium hover:text-gray-500">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" alt="Modern Architecture" class="w-full h-full object-cover brightness-[0.85] saturate-[0.8]">
             <div class="absolute inset-0 bg-black/20"></div>
@@ -157,13 +143,11 @@
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i data-lucide="arrow-down" class="text-white w-6 h-6 opacity-70"></i>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -186,7 +170,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="text-center mb-16 fade-in-section">
@@ -196,37 +179,31 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section">
                     <i data-lucide="building-2" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">Architectural Exterior Renders</h3>
                     <p class="text-sm text-gray-500 font-light leading-relaxed">Photorealistic visualizations of facades, landscapes, and urban developments.</p>
                 </div>
-                <!-- Service 2 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100">
                     <i data-lucide="armchair" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">Interior Visualization</h3>
                     <p class="text-sm text-gray-500 font-light leading-relaxed">Detailed interior shots for residential and commercial spaces.</p>
                 </div>
-                <!-- Service 3 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200">
                     <i data-lucide="layers" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">3D Modeling</h3>
                     <p class="text-sm text-gray-500 font-light leading-relaxed">Clean, optimized topology creation based on your CAD drawings.</p>
                 </div>
-                <!-- Service 4 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section">
                     <i data-lucide="monitor" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">Real Estate Marketing Images</h3>
                     <p class="text-sm text-gray-500 font-light leading-relaxed">Compelling imagery designed to speed up sales.</p>
                 </div>
-                <!-- Service 5 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100">
                     <i data-lucide="box" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">Product Visualization</h3>
                     <p class="text-sm text-gray-500 font-light leading-relaxed">High-end 3D visualization for furniture, lighting, and decor.</p>
                 </div>
-                <!-- Service 6 -->
                 <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200">
                     <i data-lucide="home" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
                     <h3 class="font-display text-xl mb-3">Residential & Commercial</h3>
@@ -236,7 +213,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section">
@@ -249,10 +225,8 @@
                 </p>
             </div>
 
-            <!-- Portfolio Grid (Reordered Alphabetically/Numerically) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
                 
-                <!-- 1.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/1.jpg', 'Signature Shot')">
                     <img src="Images/1.jpg" alt="Signature Shot" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -260,7 +234,6 @@
                     </div>
                 </div>
 
-                <!-- 2.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/2.jpg', 'Composition')">
                     <img src="Images/2.jpg" alt="Composition" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -268,7 +241,6 @@
                     </div>
                 </div>
 
-                <!-- 3.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/3.jpg', 'Environment')">
                     <img src="Images/3.jpg" alt="Environment" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -276,7 +248,6 @@
                     </div>
                 </div>
 
-                <!-- 4.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/4.jpg', 'Architectural Detail')">
                     <img src="Images/4.jpg" alt="Architectural Detail" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -284,7 +255,6 @@
                     </div>
                 </div>
 
-                <!-- 6.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/6.jpg', 'Perspective')">
                     <img src="Images/6.jpg" alt="Perspective" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -292,7 +262,6 @@
                     </div>
                 </div>
 
-                <!-- 7.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/7.jpg', 'Atmosphere')">
                     <img src="Images/7.jpg" alt="Atmosphere" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -300,7 +269,6 @@
                     </div>
                 </div>
 
-                <!-- 8.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/8.jpg', 'Interior Render')">
                     <img src="Images/8.jpg" alt="Interior Render" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -308,7 +276,6 @@
                     </div>
                 </div>
 
-                <!-- 9.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/9.jpg', 'Visualization')">
                     <img src="Images/9.jpg" alt="Visualization" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -316,7 +283,6 @@
                     </div>
                 </div>
 
-                <!-- 10.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/10.jpg', 'Materiality')">
                     <img src="Images/10.jpg" alt="Materiality" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -324,7 +290,6 @@
                     </div>
                 </div>
 
-                <!-- 11.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/11.jpg', 'Project Visualization')">
                     <img src="Images/11.jpg" alt="Project Visualization" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -332,7 +297,6 @@
                     </div>
                 </div>
 
-                <!-- 18.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/18.jpg', 'Interior Space')">
                     <img src="Images/18.jpg" alt="Interior Space" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -340,7 +304,6 @@
                     </div>
                 </div>
 
-                <!-- 20.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/20.jpg', 'Project Detail')">
                     <img src="Images/20.jpg" alt="Project Detail" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -348,7 +311,6 @@
                     </div>
                 </div>
 
-                <!-- 21.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/21.jpg', 'Detail Shot')">
                     <img src="Images/21.jpg" alt="Detail Shot" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -356,7 +318,6 @@
                     </div>
                 </div>
 
-                <!-- COCINA 01 (1).jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/COCINA%2001%20(1).jpg', 'Culinary Space')">
                     <img src="Images/COCINA%2001%20(1).jpg" alt="Culinary Space" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -364,7 +325,6 @@
                     </div>
                 </div>
 
-                <!-- COCINA 01 (2).jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/COCINA%2001%20(2).jpg', 'Kitchen Design')">
                     <img src="Images/COCINA%2001%20(2).jpg" alt="Kitchen Design" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -372,7 +332,6 @@
                     </div>
                 </div>
 
-                <!-- IMAGEN 01.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/IMAGEN%2001.jpg', 'Selected Work')">
                     <img src="Images/IMAGEN%2001.jpg" alt="Selected Work" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -380,7 +339,6 @@
                     </div>
                 </div>
 
-                <!-- IMAGEN 04.jpg -->
                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/IMAGEN%2004.jpg', 'Final Render')">
                     <img src="Images/IMAGEN%2004.jpg" alt="Final Render" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -388,7 +346,6 @@
                     </div>
                 </div>
 
-                 <!-- Perspectiva 01.jpg -->
                  <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/Perspectiva%2001.jpg', 'Main Perspective')">
                     <img src="Images/Perspectiva%2001.jpg" alt="Main Perspective" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -396,7 +353,6 @@
                     </div>
                 </div>
 
-                 <!-- Perspectiva 04.jpg -->
                  <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/Perspectiva%2004.jpg', 'Architectural View')">
                     <img src="Images/Perspectiva%2004.jpg" alt="Architectural View" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -404,7 +360,6 @@
                     </div>
                 </div>
 
-                 <!-- Perspectiva 05.jpg -->
                  <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/Perspectiva%2005.jpg', 'Exterior View')">
                     <img src="Images/Perspectiva%2005.jpg" alt="Exterior View" class="w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -416,16 +371,13 @@
         </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <!-- Removed the grid layout and replaced with a single centered column -->
             <div class="max-w-3xl mx-auto text-center">
                 <div class="fade-in-section">
                      <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Why Choose Us</span>
                     <h2 class="font-display text-4xl font-light text-brand-black mb-12">Why work with us?</h2>
                     
-                    <!-- Changed list items to flex-col and centered -->
                     <ul class="space-y-12">
                         <li class="flex flex-col items-center text-center">
                             <i data-lucide="check-circle" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
@@ -464,12 +416,10 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Removed the image div completely -->
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-3xl mx-auto px-6 text-center fade-in-section">
             <h2 class="font-display text-4xl md:text-5xl font-light text-brand-black mb-6">Contact</h2>
@@ -482,7 +432,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-white py-12 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
@@ -498,7 +447,6 @@
         </div>
     </footer>
 
-    <!-- Image Modal (Lightbox) -->
     <div id="imageModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/90 p-4 opacity-0 transition-opacity duration-300" onclick="closeModal()">
         <button class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none">
             <i data-lucide="x" class="w-10 h-10"></i>
@@ -509,7 +457,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
