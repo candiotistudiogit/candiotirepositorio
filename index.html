@@ -40,47 +40,14 @@
     </script>
 
     <style>
-        /* Custom Animations & Utilities */
-        body {
-            background-color: #f9f9f9;
-            color: #2d2d2d;
-        }
-        
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            will-change: opacity, visibility;
-        }
-        
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: none;
-        }
-
-        /* Image Hover Zoom Effect */
-        .img-zoom-container {
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .img-zoom-container img {
-            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .img-zoom-container:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Navbar Styles - White Background */
-        .glass-nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Modal Styles */
-        #imageModal {
-            transition: opacity 0.3s ease-in-out;
-        }
+        body { background-color: #f9f9f9; color: #2d2d2d; }
+        .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 1s ease-out, transform 1s ease-out; will-change: opacity, visibility; }
+        .fade-in-section.is-visible { opacity: 1; transform: none; }
+        .img-zoom-container { overflow: hidden; cursor: pointer; }
+        .img-zoom-container img { transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .img-zoom-container:hover img { transform: scale(1.05); }
+        .glass-nav { background-color: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(0,0,0,0.05); backdrop-filter: blur(10px); }
+        #imageModal { transition: opacity 0.3s ease-in-out; }
     </style>
 </head>
 <body class="antialiased selection:bg-gray-200 selection:text-black">
@@ -88,20 +55,17 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center h-28">
-                
                 <a href="#" class="block hover:opacity-70 transition-opacity">
                     <span class="font-display font-medium text-2xl tracking-widest text-brand-black uppercase">
                         Candioti<span class="font-light text-gray-400">Studio</span>
                     </span>
                 </a>
-
                 <div class="hidden md:flex space-x-10 items-center">
                     <a href="#about" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">About</a>
                     <a href="#portfolio" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">Selected Works</a>
                     <a href="#services" class="text-sm uppercase tracking-widest text-brand-black hover:text-gray-500 transition-colors">Services</a>
                     <a href="#contact" class="px-6 py-2 border border-brand-black text-brand-black text-xs uppercase tracking-widest hover:bg-brand-black hover:text-white transition-all duration-300">Contact</a>
                 </div>
-
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="outline-none mobile-menu-button">
                         <i data-lucide="menu" class="w-6 h-6 text-brand-black"></i>
@@ -109,7 +73,6 @@
                 </div>
             </div>
         </div>
-
         <div class="hidden mobile-menu md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg text-brand-black">
             <ul class="flex flex-col text-center py-8 space-y-6">
                 <li><a href="#about" class="block text-sm uppercase tracking-widest hover:text-gray-500">About</a></li>
@@ -125,7 +88,6 @@
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" alt="Modern Architecture" class="w-full h-full object-cover brightness-[0.85] saturate-[0.8]">
             <div class="absolute inset-0 bg-black/20"></div>
         </div>
-
         <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto fade-in-section">
             <h1 class="font-display font-light text-5xl md:text-7xl lg:text-8xl tracking-tight leading-tight mb-6">
                 High-End <br><span class="font-normal italic font-serif">Architectural</span> Visualization
@@ -134,15 +96,12 @@
                 Photorealistic 3D renders for architecture, interiors and real estate projects worldwide.
             </h2>
             <p class="font-sans font-extralight text-base md:text-lg tracking-wide text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-                At Candioti Studio, we transform architectural ideas into compelling visual experiences. We specialize in high-quality 3D modeling that helps our clients communicate and sell with clarity.
+                At Candioti Studio, we transform architectural ideas into compelling visual experiences.
             </p>
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <a href="#portfolio" class="px-8 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300">
-                    View Portfolio
-                </a>
+                <a href="#portfolio" class="px-8 py-4 bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors duration-300">View Portfolio</a>
             </div>
         </div>
-        
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i data-lucide="arrow-down" class="text-white w-6 h-6 opacity-70"></i>
         </div>
@@ -152,18 +111,14 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in-section order-2 lg:order-1">
-<img src="Images/about-nueva.png" alt="Candioti Studio Interior" class="w-full h-[600px] object-cover">
+                    <img src="images/oficina.jpg" alt="Candioti Studio Interior" class="w-full h-[600px] object-cover shadow-lg">
                 </div>
                 <div class="fade-in-section order-1 lg:order-2 lg:pl-12">
                     <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">About Candioti Studio</span>
                     <h2 class="font-display text-4xl md:text-5xl font-light mb-8 text-brand-black">Bringing clarity to the unbuilt.</h2>
                     <div class="space-y-6 text-gray-600 font-light leading-relaxed">
-                        <p>
-                            Candioti Studio is a specialized architectural visualization studio focused on creating realistic and atmospheric 3D images.
-                        </p>
-                        <p>
-                            We work closely with architects, designers and developers to bring projects to life before they are built. Our workflow is efficient, detail-oriented and client-focused, ensuring high-quality results with clear communication and fast delivery times.
-                        </p>
+                        <p>Candioti Studio is a specialized architectural visualization studio focused on creating realistic and atmospheric 3D images.</p>
+                        <p>We work closely with architects, designers and developers to bring projects to life before they are built. Our workflow is efficient, detail-oriented and client-focused.</p>
                     </div>
                 </div>
             </div>
@@ -175,247 +130,74 @@
             <div class="text-center mb-16 fade-in-section">
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Expertise</span>
                 <h2 class="font-display text-4xl font-light text-brand-black">Our Services</h2>
-                <p class="mt-4 text-gray-500 font-light max-w-xl mx-auto">Each project receives the same level of attention and quality, regardless of scale or complexity.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section">
-                    <i data-lucide="building-2" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">Architectural Exterior Renders</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">Photorealistic visualizations of facades, landscapes, and urban developments.</p>
-                </div>
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100">
-                    <i data-lucide="armchair" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">Interior Visualization</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">Detailed interior shots for residential and commercial spaces.</p>
-                </div>
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200">
-                    <i data-lucide="layers" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">3D Modeling</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">Clean, optimized topology creation based on your CAD drawings.</p>
-                </div>
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section">
-                    <i data-lucide="monitor" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">Real Estate Marketing Images</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">Compelling imagery designed to speed up sales.</p>
-                </div>
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100">
-                    <i data-lucide="box" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">Product Visualization</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">High-end 3D visualization for furniture, lighting, and decor.</p>
-                </div>
-                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200">
-                    <i data-lucide="home" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i>
-                    <h3 class="font-display text-xl mb-3">Residential & Commercial</h3>
-                    <p class="text-sm text-gray-500 font-light leading-relaxed">Large scale visualization for offices, retail, and public spaces.</p>
-                </div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section"><i data-lucide="building-2" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">Exterior Renders</h3><p class="text-sm text-gray-500 font-light">Photorealistic visualizations of facades and landscapes.</p></div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100"><i data-lucide="armchair" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">Interior Visualization</h3><p class="text-sm text-gray-500 font-light">Detailed interior shots for spaces.</p></div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200"><i data-lucide="layers" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">3D Modeling</h3><p class="text-sm text-gray-500 font-light">Clean topology based on CAD.</p></div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section"><i data-lucide="monitor" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">Marketing Images</h3><p class="text-sm text-gray-500 font-light">Compelling imagery for sales.</p></div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-100"><i data-lucide="box" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">Product Viz</h3><p class="text-sm text-gray-500 font-light">Furniture and decor visualization.</p></div>
+                <div class="bg-white p-10 hover:shadow-xl transition-shadow duration-500 fade-in-section transition-delay-200"><i data-lucide="home" class="w-8 h-8 text-gray-800 mb-6 stroke-[1px]"></i><h3 class="font-display text-xl mb-3">Commercial</h3><p class="text-sm text-gray-500 font-light">Large scale offices and retail.</p></div>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section">
-                <div>
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Selected Works</span>
-                    <h2 class="font-display text-4xl font-light text-brand-black">Recent Projects</h2>
-                </div>
-                <p class="text-gray-500 font-light text-sm mt-4 md:mt-0 max-w-xs text-right hidden md:block">
-                    A selection of recent visualization projects created for international clients.
-                </p>
+            <div class="mb-16 fade-in-section">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Selected Works</span>
+                <h2 class="font-display text-4xl font-light text-brand-black">Recent Projects</h2>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
-                
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/1.jpg', 'Signature Shot')">
-                    <img src="images/1.jpg" alt="Signature Shot" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 01</span>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/1.jpg', 'Project 01')">
+                    <img src="images/1.jpg" alt="Project 01" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 01</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/2.jpg', 'Composition')">
-                    <img src="images/2.jpg" alt="Composition" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 02</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/2.jpg', 'Project 02')">
+                    <img src="images/2.jpg" alt="Project 02" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 02</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/3.jpg', 'Environment')">
-                    <img src="images/3.jpg" alt="Environment" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 03</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/3.jpg', 'Project 03')">
+                    <img src="images/3.jpg" alt="Project 03" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 03</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/4.jpg', 'Architectural Detail')">
-                    <img src="images/4.jpg" alt="Architectural Detail" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 04</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/4.jpg', 'Project 04')">
+                    <img src="images/4.jpg" alt="Project 04" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 04</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/6.jpg', 'Perspective')">
-                    <img src="images/6.jpg" alt="Perspective" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 06</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/6.jpg', 'Project 06')">
+                    <img src="images/6.jpg" alt="Project 06" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 06</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/7.jpg', 'Atmosphere')">
-                    <img src="images/7.jpg" alt="Atmosphere" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 07</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/7.jpg', 'Project 07')">
+                    <img src="images/7.jpg" alt="Project 07" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 07</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/8.jpg', 'Interior Render')">
-                    <img src="images/8.jpg" alt="Interior Render" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 08</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/8.jpg', 'Project 08')">
+                    <img src="images/8.jpg" alt="Project 08" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 08</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/9.jpg', 'Visualization')">
-                    <img src="images/9.jpg" alt="Visualization" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 09</span>
-                    </div>
+                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/9.jpg', 'Project 09')">
+                    <img src="images/9.jpg" alt="Project 09" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 09</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/10.jpg', 'Materiality')">
-                    <img src="images/10.jpg" alt="Materiality" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 10</span>
-                    </div>
+                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/10.jpg', 'Project 10')">
+                    <img src="images/10.jpg" alt="Project 10" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"><span class="text-white text-sm tracking-widest uppercase">Project 10</span></div>
                 </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/11.jpg', 'Project Visualization')">
-                    <img src="images/11.jpg" alt="Project Visualization" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 11</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/18.jpg', 'Interior Space')">
-                    <img src="images/18.jpg" alt="Interior Space" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 18</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/20.jpg', 'Project Detail')">
-                    <img src="images/20.jpg" alt="Project Detail" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 20</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/21.jpg', 'Detail Shot')">
-                    <img src="images/21.jpg" alt="Detail Shot" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Project 21</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/COCINA%2001%20(1).jpg', 'Culinary Space')">
-                    <img src="images/COCINA%2001%20(1).jpg" alt="Culinary Space" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Kitchen I</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/COCINA%2001%20(2).jpg', 'Kitchen Design')">
-                    <img src="images/COCINA%2001%20(2).jpg" alt="Kitchen Design" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Kitchen II</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/IMAGEN%2001.jpg', 'Selected Work')">
-                    <img src="images/IMAGEN%2001.jpg" alt="Selected Work" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Image 01</span>
-                    </div>
-                </div>
-
-                <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/IMAGEN%2004.jpg', 'Final Render')">
-                    <img src="images/IMAGEN%2004.jpg" alt="Final Render" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Image 04</span>
-                    </div>
-                </div>
-
-                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/Perspectiva%2001.jpg', 'Main Perspective')">
-                    <img src="images/Perspectiva%2001.jpg" alt="Main Perspective" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Perspective I</span>
-                    </div>
-                </div>
-
-                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200" onclick="openModal('images/Perspectiva%2004.jpg', 'Architectural View')">
-                    <img src="images/Perspectiva%2004.jpg" alt="Architectural View" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Perspective IV</span>
-                    </div>
-                </div>
-
-                 <div class="img-zoom-container fade-in-section relative aspect-[4/5] bg-gray-200 lg:translate-y-12" onclick="openModal('images/Perspectiva%2005.jpg', 'Exterior View')">
-                    <img src="images/Perspectiva%2005.jpg" alt="Exterior View" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <span class="text-white text-sm tracking-widest uppercase">Perspective V</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <section class="py-24 bg-brand-light">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="max-w-3xl mx-auto text-center">
-                <div class="fade-in-section">
-                     <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Why Choose Us</span>
-                    <h2 class="font-display text-4xl font-light text-brand-black mb-12">Why work with us?</h2>
-                    
-                    <ul class="space-y-12">
-                        <li class="flex flex-col items-center text-center">
-                            <i data-lucide="check-circle" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
-                            <div>
-                                <h4 class="font-display text-xl mb-2">High-quality Photorealistic Results</h4>
-                                <p class="text-sm text-gray-500 font-light max-w-lg mx-auto">We don't just render geometry; we render atmosphere and light.</p>
-                            </div>
-                        </li>
-                        <li class="flex flex-col items-center text-center">
-                            <i data-lucide="message-square" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
-                            <div>
-                                <h4 class="font-display text-xl mb-2">Clear and Professional Communication</h4>
-                                <p class="text-sm text-gray-500 font-light max-w-lg mx-auto">We ensure you are always updated on the project's progress.</p>
-                            </div>
-                        </li>
-                        <li class="flex flex-col items-center text-center">
-                            <i data-lucide="clock" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
-                            <div>
-                                <h4 class="font-display text-xl mb-2">Fast Turnaround</h4>
-                                <p class="text-sm text-gray-500 font-light max-w-lg mx-auto">Optimized workflows to meet tight deadlines.</p>
-                            </div>
-                        </li>
-                        <li class="flex flex-col items-center text-center">
-                            <i data-lucide="dollar-sign" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
-                            <div>
-                                <h4 class="font-display text-xl mb-2">Fixed and Transparent Pricing</h4>
-                                <p class="text-sm text-gray-500 font-light max-w-lg mx-auto">No hidden fees or surprises at the end of the project.</p>
-                            </div>
-                        </li>
-                        <li class="flex flex-col items-center text-center">
-                            <i data-lucide="globe" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i>
-                            <div>
-                                <h4 class="font-display text-xl mb-2">International Experience</h4>
-                                <p class="text-sm text-gray-500 font-light max-w-lg mx-auto">Trusted by clients in the US and Europe.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+            <div class="fade-in-section">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Why Choose Us</span>
+                <h2 class="font-display text-4xl font-light text-brand-black mb-12">Why work with us?</h2>
+                <ul class="space-y-12 max-w-3xl mx-auto">
+                    <li class="flex flex-col items-center"><i data-lucide="check-circle" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i><h4 class="font-display text-xl mb-2">High-quality Photorealistic Results</h4><p class="text-sm text-gray-500 font-light">We render atmosphere and light.</p></li>
+                    <li class="flex flex-col items-center"><i data-lucide="clock" class="w-8 h-8 text-gray-800 mb-3 stroke-[1.5px]"></i><h4 class="font-display text-xl mb-2">Fast Turnaround</h4><p class="text-sm text-gray-500 font-light">Optimized workflows.</p></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -423,107 +205,51 @@
     <section id="contact" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-3xl mx-auto px-6 text-center fade-in-section">
             <h2 class="font-display text-4xl md:text-5xl font-light text-brand-black mb-6">Contact</h2>
-            <p class="text-gray-500 font-light text-lg mb-10 leading-relaxed">
-                Ready to start your project?
-            </p>
-            <a href="mailto:jeronimo@candiotistudio.com" class="text-lg md:text-2xl font-light text-brand-black border-b border-gray-300 pb-2 hover:border-black transition-all duration-300">
-                jeronimo@candiotistudio.com
-            </a>
+            <p class="text-gray-500 font-light text-lg mb-10">Ready to start your project?</p>
+            <a href="mailto:jeronimo@candiotistudio.com" class="text-lg md:text-2xl font-light text-brand-black border-b border-gray-300 pb-2 hover:border-black transition-all duration-300">jeronimo@candiotistudio.com</a>
         </div>
     </section>
 
     <footer class="bg-white py-12 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="font-display font-medium text-lg tracking-widest text-brand-black uppercase">
-                    Candioti<span class="font-light text-gray-400">Studio</span>
-                </span>
-            </div>
-            
-            <div class="text-xs text-gray-400 font-light tracking-wide text-center md:text-right">
-                <p>© 2024 Candioti Studio – Architectural Visualization</p>
-                <p class="mt-1">Serving clients worldwide.</p>
-            </div>
+            <div class="mb-4 md:mb-0"><span class="font-display font-medium text-lg tracking-widest text-brand-black uppercase">Candioti<span class="font-light text-gray-400">Studio</span></span></div>
+            <div class="text-xs text-gray-400 font-light tracking-wide text-center md:text-right"><p>© 2024 Candioti Studio</p></div>
         </div>
     </footer>
 
     <div id="imageModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/90 p-4 opacity-0 transition-opacity duration-300" onclick="closeModal()">
-        <button class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none">
-            <i data-lucide="x" class="w-10 h-10"></i>
-        </button>
+        <button class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none"><i data-lucide="x" class="w-10 h-10"></i></button>
         <div class="relative max-w-7xl max-h-screen w-full flex flex-col items-center justify-center" onclick="event.stopPropagation()">
-            <img id="modalImage" src="" alt="Full Screen View" class="max-h-[85vh] w-auto object-contain shadow-2xl">
+            <img id="modalImage" src="" alt="View" class="max-h-[85vh] w-auto object-contain shadow-2xl">
             <p id="modalCaption" class="mt-4 text-white font-light tracking-widest text-sm uppercase"></p>
         </div>
     </div>
 
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.querySelector('.mobile-menu');
+        if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
 
-        if (btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-
-        // Smooth Fade In Animation on Scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Only animate once
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Lightbox Functions
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-
-        function openModal(imageSrc, imageAlt) {
+        const caption = document.getElementById('modalCaption');
+        function openModal(src, alt) {
             modal.classList.remove('hidden');
-            // Small delay to allow display:block to apply before changing opacity for transition
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('flex'); // Ensure flex is added
-            }, 10);
-            
-            modalImg.src = imageSrc;
-            modalCaption.textContent = imageAlt;
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            setTimeout(() => { modal.classList.remove('opacity-0'); modal.classList.add('flex'); }, 10);
+            modalImg.src = src; caption.textContent = alt; document.body.style.overflow = 'hidden';
         }
-
         function closeModal() {
             modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 300); // Wait for transition
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            setTimeout(() => { modal.classList.add('hidden'); modal.classList.remove('flex'); }, 300);
+            document.body.style.overflow = 'auto';
         }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
+        document.addEventListener('keydown', e => { if (e.key === "Escape") closeModal(); });
     </script>
 </body>
 </html>
